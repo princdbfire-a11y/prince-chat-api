@@ -19,14 +19,15 @@ Your chat_api.php will call this instead of Gemini's API.
 from flask import Flask, request, jsonify
 import re
 
-from tools.calculator import handle_calculator
-from tools.letter_writer import handle_letter
-from tools.college_info import handle_college_info
-from tools.navigation import handle_navigation
-from tools.casual_chat import handle_casual_chat
-from tools.announcements_tool import handle_announcements
-from tools.classwork_tool import handle_classwork
-
+from tools import (
+    handle_calculator,
+    handle_letter,
+    handle_college_info,
+    handle_navigation,
+    handle_casual_chat,
+    handle_announcements,
+    handle_classwork
+)
 app = Flask(__name__)
 
 # ---------------------------------------------------------
